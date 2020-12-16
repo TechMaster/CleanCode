@@ -24,6 +24,8 @@ public class ScanFile {
     }
   }
 
+  
+
   public List<String> listFile(final String pattern, final String folder){
     try (Stream<Path> walk = Files.walk(Paths.get(folder))) {
       return walk.map(x -> x.toString()).filter(f -> f.endsWith(pattern)).collect(Collectors.toList());
