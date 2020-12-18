@@ -1,5 +1,9 @@
 # Mã nguồn demo cho buổi Clean Code - OOP
 
+- [Encapsulation - before](src/main/java/encapsulation/before/Person.java)
+
+- [Encapsulation - after](src/main/java/encapsulation/after/Person.java): đóng gói và validate ở Setter method
+  
 - [Jungle.java](src/main/java/forest/Jungle.java) : Sử dụng switch để xử lý logic cho từng kiểu dữ liệu. Cách này rõ ràng không hay rồi.
 
 - [Family.java](src/main/java/family/Family.java) : Demo Single Inheritance (extends) vs Multiple Inheritance (implements)

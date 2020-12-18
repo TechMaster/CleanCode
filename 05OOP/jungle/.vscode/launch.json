@@ -14,7 +14,7 @@
       "type": "java",
       "name": "Debug (Launch)-App<jungle>",
       "request": "launch",
-      "mainClass": "main.App",
+      "mainClass": "App",
       "projectName": "jungle"
     }
   ]
