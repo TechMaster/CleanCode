@@ -1,0 +1,67 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Launch Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "type": "java",
+      "name": "Launch App",
+      "request": "launch",
+      "mainClass": "main.App",
+      "projectName": "jungle (2)"
+    },
+    {
+      "type": "java",
+      "name": "Launch PayrollApplication",
+      "request": "launch",
+      "mainClass": "vn.techmaster.payroll.PayrollApplication",
+      "projectName": "payroll"
+    },
+    {
+      "type": "java",
+      "name": "Launch App(1)",
+      "request": "launch",
+      "mainClass": "readexcel.App",
+      "projectName": "readexcel (2)"
+    },
+    {
+      "type": "java",
+      "name": "Launch App(2)",
+      "request": "launch",
+      "mainClass": "readexcel.App",
+      "projectName": "readexcel"
+    },
+    {
+      "type": "java",
+      "name": "Launch TopcarApplication",
+      "request": "launch",
+      "mainClass": "vn.techmaster.topcar.TopcarApplication",
+      "projectName": "topcar"
+    },
+    {
+      "type": "java",
+      "name": "Launch MavenWrapperDownloader",
+      "request": "launch",
+      "mainClass": "MavenWrapperDownloader"
+    },
+    {
+      "type": "java",
+      "name": "Launch ScanFileApp",
+      "request": "launch",
+      "mainClass": "ScanFileApp"
+    },
+    {
+      "type": "java",
+      "name": "Launch TopcarApplication(1)",
+      "request": "launch",
+      "mainClass": "vn.techmaster.topcar.TopcarApplication"
+    }
+  ]
+}

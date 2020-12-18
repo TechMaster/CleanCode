@@ -1,7 +1,6 @@
 package annotation;
 
 import java.lang.annotation.Annotation;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 import annotation.TesterInfo.Priority;

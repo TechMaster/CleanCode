@@ -1,12 +1,10 @@
 package vn.techmaster.payroll.model;
 
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
-import java.util.Calendar;
-import java.util.Date;
+
 
 public class Employee {
   private String name;
@@ -39,8 +37,8 @@ public class Employee {
   /* From DOB, calculate age of employee
    */
   public float getAge() {
-    DateTimeFormatter DATEFORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-    LocalDate birthDay = LocalDate.parse(this.dob, DATEFORMATTER);
+    DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+    LocalDate birthDay = LocalDate.parse(this.dob, dateFormatter);
     return birthDay.until(LocalDate.now(), ChronoUnit.DAYS) / 365.2425f;    
   }
 
