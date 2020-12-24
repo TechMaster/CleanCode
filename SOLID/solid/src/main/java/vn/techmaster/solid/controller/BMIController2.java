@@ -29,6 +29,7 @@ public class BMIController2 {
     return "bmi2";
   }
 
+  //Refactor ra một hàm độc lập
   private BMIResult calculateBMI(BMIRequest request) {
     float bmiIndex = request.getWeight() / (request.getHeight() * request.getHeight());
       String category;

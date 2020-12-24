@@ -7,6 +7,9 @@ import vn.techmaster.solid.response.BMIResult;
 
 @Service
 public class HealthService {
+
+  // Phương thức này cũng không phải tốt lắm, vì nó phục thuộc vào 2 kiểu BMIRequest, BMIResult
+  // Khi BMIRequest và BMI Result thay đổi, phương thức này cũng có thể bị ảnh hưởng
   public BMIResult calculateBMI(BMIRequest request) {
     float bmiIndex = request.getWeight() / (request.getHeight() * request.getHeight());
       String category;
