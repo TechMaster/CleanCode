@@ -1,0 +1,12 @@
+/Users/h-sierra/Projects/CleanCode/CleanCode/bin/Debug/netcoreapp3.1/CleanCode.deps.json
+/Users/h-sierra/Projects/CleanCode/CleanCode/bin/Debug/netcoreapp3.1/CleanCode.runtimeconfig.json
+/Users/h-sierra/Projects/CleanCode/CleanCode/bin/Debug/netcoreapp3.1/CleanCode.runtimeconfig.dev.json
+/Users/h-sierra/Projects/CleanCode/CleanCode/bin/Debug/netcoreapp3.1/CleanCode.dll
+/Users/h-sierra/Projects/CleanCode/CleanCode/bin/Debug/netcoreapp3.1/CleanCode.pdb
+/Users/h-sierra/Projects/CleanCode/CleanCode/obj/Debug/netcoreapp3.1/CleanCode.csprojAssemblyReference.cache
+/Users/h-sierra/Projects/CleanCode/CleanCode/obj/Debug/netcoreapp3.1/CleanCode.AssemblyInfoInputs.cache
+/Users/h-sierra/Projects/CleanCode/CleanCode/obj/Debug/netcoreapp3.1/CleanCode.AssemblyInfo.cs
+/Users/h-sierra/Projects/CleanCode/CleanCode/obj/Debug/netcoreapp3.1/CleanCode.csproj.CoreCompileInputs.cache
+/Users/h-sierra/Projects/CleanCode/CleanCode/obj/Debug/netcoreapp3.1/CleanCode.dll
+/Users/h-sierra/Projects/CleanCode/CleanCode/obj/Debug/netcoreapp3.1/CleanCode.pdb
+/Users/h-sierra/Projects/CleanCode/CleanCode/obj/Debug/netcoreapp3.1/CleanCode.genruntimeconfig.cache
