@@ -5,5 +5,5 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE) // on class level
 public @interface Entity {
-  String name();
+  String   name();
 }

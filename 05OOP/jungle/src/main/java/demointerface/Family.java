@@ -1,4 +1,4 @@
-package family;
+package demointerface;
 
 import java.util.List;
 
@@ -64,36 +64,3 @@ class Son extends Father implements PlayGuitare, Swim {
   }
 }
 
-interface Fly {
-  public void fly();
-}
-
-interface BetterFly extends Fly {
-  public void glide();
-}
-
-class Eagle implements BetterFly {
-
-  @Override
-  public void glide() {
-    System.out.println("glide");
-  }
-
-  @Override
-  public void fly() {
-    System.out.println("fly");
-  }
-}
-
-interface Utility {
-  public interface Zip {
-    public void compress();
-    public static void fun() {
-      System.out.println();
-    }
-  }
-}
-
-interface Sevenzip extends Utility.Zip {
-  public void strongCompress();
-}

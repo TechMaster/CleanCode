@@ -32,18 +32,19 @@ public class Person {
     return email;
   }
 
-  //Setter bổ xung validation
-  public void setEmail(String email) throws Exception{
-    final String EMAIL_PATTERN = "^(.+)@(\\S+)$";
-    Pattern pattern = Pattern.compile(EMAIL_PATTERN);
-    Matcher matcher = pattern.matcher(email);
-    if (matcher.matches()) {
-      this.email = email;
-    } else {
-      throw new Exception("Invalid email " + email);
-    }
-    
+//Setter bổ xung validation
+public void setEmail(String email) throws Exception{
+  final String EMAIL_PATTERN = "^(.+)@(\\S+)$";
+  Pattern pattern = Pattern.compile(EMAIL_PATTERN);
+  Matcher matcher = pattern.matcher(email);
+  if (matcher.matches()) {
+    this.email = email;
+  } else {
+    throw new Exception("Invalid email " + email);
   }
+  
+  
+}
 
   public Address getAddress() {
     return address;

@@ -21,14 +21,14 @@ public class Address {
     return countryCode;
   }
 
-  public void setCountryCode(String countryCode) throws Exception {
-    boolean result = Arrays.stream(arrayCountryCode).anyMatch(countryCode::equals);
-    if (result) {
-      this.countryCode = countryCode;
-    } else {
-      throw new Exception("bad country code: " + countryCode);
-    }
-    
+public void setCountryCode(String countryCode) throws Exception {
+  boolean result = Arrays.stream(arrayCountryCode).anyMatch(countryCode::equals);
+  if (result) {
+    this.countryCode = countryCode;
+  } else {
+    throw new Exception("bad country code: " + countryCode);
   }
+  
+}
 
 }

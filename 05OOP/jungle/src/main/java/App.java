@@ -2,9 +2,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import annotation.Zoo;
+import demointerface.Family;
 import encapsulation.after.Address;
 import encapsulation.after.Person;
-import family.Family;
 import forest.Jungle;
 import forest.PetHouse;
 import generic.GenericSort;
@@ -33,7 +33,8 @@ public class App {
          * 
          * University uni = new University(); uni.teach(); testOrderBefore();
          * 
-         * Family family = new Family(); family.test();
+         * Family family = new Family(); 
+         * family.test();
          * 
          * GenericSort.demoSort();
          * 
@@ -47,7 +48,7 @@ public class App {
         
         try {
             Person person;
-            Address address = new Address("JK", "Hanoi", "48 Tố Hữu", "Viwaseen");
+            Address address = new Address("VK", "Hanoi", "48 Tố Hữu", "Viwaseen");
             person = new Person("Cường", "Trịnh", "cuong#techmaster.vn",
                     address);
             System.out.println(person.getFullName());
