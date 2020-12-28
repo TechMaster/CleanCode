@@ -6,28 +6,15 @@
   "configurations": [
     {
       "type": "java",
-      "name": "Launch MainApp",
-      "request": "launch",
-      "mainClass": "Lamp.MainApp"
-    },
-    {
-      "type": "java",
       "name": "Launch Current File",
       "request": "launch",
       "mainClass": "${file}"
     },
     {
       "type": "java",
-      "name": "Launch SolidApplication",
-      "request": "launch",
-      "mainClass": "vn.techmaster.solid.SolidApplication",
-      "projectName": "solid"
-    },
-    {
-      "type": "java",
       "name": "Launch MainApp",
       "request": "launch",
-      "mainClass": "MainApp"
+      "mainClass": "Lamp.MainApp"
     }
   ]
 }
