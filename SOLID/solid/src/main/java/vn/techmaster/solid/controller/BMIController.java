@@ -24,6 +24,7 @@ public class BMIController {
 
   @PostMapping()
   public String handleBMIForm(@ModelAttribute BMIRequest request, BindingResult bindingResult, Model model) {
+    // Đoạn code này trộn lẫn quá nhiều chức năng. Vi phạm Single Responsibility
     if (! bindingResult.hasErrors()) {
       float bmiIndex = request.getWeight() / (request.getHeight() * request.getHeight());
       String category;
@@ -47,10 +48,11 @@ public class BMIController {
 
       BMIResult bmiResult = new BMIResult(bmiIndex, category,"");
 
+      //Trả về 2 đối tượng để Thymeleaf render ra HTML
       model.addAttribute("bmiRequest", request); 
       model.addAttribute("bmiResult", bmiResult);
     }
-    return "bmi";
+    return "bmi"; // Sử dụng template bmi.html trong thư mục resources/templates/bmi.html
   }
 }
 
