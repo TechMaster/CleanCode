@@ -1,4 +1,6 @@
-# Refactor ứng dụng trợ lý ảo
+# Single Responsibity và Open / Close Principle 
+
+## Refactor ứng dụng trợ lý ảo
 
 Nhân sự kiện Zalo AI 2020 ra mắt ứng dụng trợ lý Kiki, trong khoá học CleanCode chúng ta cũng sẽ làm một ứng dụng trợ lý ảo đơn giản để rèn kỹ năng refactor, tái cấu trúc code.
 
@@ -9,6 +11,8 @@ Nhân sự kiện Zalo AI 2020 ra mắt ứng dụng trợ lý Kiki, trong khoá
 3. Dự báo thời tiết (Weather Forecast)
 
 ![](images/BMI_Calculator.jpg)
+
+Ứng dụng này được viết bằng Java, Spring Boot. Các bạn có thể dùng Intellij community hoặc VSCode để lập trình. Cần cài bổ xung Java Extension Pack và Sppring Boot Extension Pack
 
 **Các bước tôi thường làm khi phát triển phần mềm**
 

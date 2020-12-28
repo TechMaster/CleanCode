@@ -32,4 +32,10 @@ public class HealthService {
       }
       return new BMIResult(bmiIndex, category,"");
   }
+
+  private float computeBMI(float height, float weight) {
+    return weight / (height * height);
+  }
+
+  private String 
 }
