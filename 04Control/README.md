@@ -15,3 +15,7 @@ Mục đích của bài tập nhằm tính ra tiền phí điện thoại hàng 
 # Yêu cầu
 
 - Refactore lại code nhằm loại bỏ Switch bằng Polymorphism
+
+# Clean Code CheatSheet
+
+https://drive.google.com/file/d/1ty8dAgIbAJ1QBW1R_dOpCelSMSTfv5xc/view?usp=sharing
