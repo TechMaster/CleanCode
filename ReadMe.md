@@ -20,3 +20,4 @@
 - [Buổi 03](03Basic): Các nguyên tắc viết mã sạch căn bản. gv Trịnh Minh Cường
 - [Buổi 04](04Control): Tối ưu if then else, for loop
 - [Buổi 05](05OOP): Lập trình hướng đối tượng
+- [Buổi 08](08DesignPattern1): OOP Design Patterns 01
