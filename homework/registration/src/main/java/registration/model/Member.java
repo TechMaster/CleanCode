@@ -12,6 +12,6 @@ public class Member extends User {
 
     @Override
     public void register() {
-        log.info("Register member {}", userInfo);
+        System.out.println(String.format("Register member %s", userInfo));
     }
 }
