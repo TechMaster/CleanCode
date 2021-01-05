@@ -1,6 +1,8 @@
 package shipping.after;
 
-// Strategy interface
+/**
+ * Strategy interface
+ */
 public interface ShippingStrategy {
 
     int calculateFee();

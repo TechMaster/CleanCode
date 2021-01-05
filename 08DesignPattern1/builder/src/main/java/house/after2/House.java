@@ -21,4 +21,5 @@ public class House {
     private SwimmingPool swimmingPool;
 
     private Garden garden;
+
 }

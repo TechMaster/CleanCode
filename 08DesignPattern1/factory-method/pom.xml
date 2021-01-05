@@ -8,10 +8,11 @@
 		<version>2.4.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>vn.techmaster.designpattern</groupId>
+	<groupId>vn.techmaster.cleancode</groupId>
 	<artifactId>factory-method</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>factory-method</name>
+	<description>Factory method pattern demo</description>
 
 	<properties>
 		<java.version>1.8</java.version>

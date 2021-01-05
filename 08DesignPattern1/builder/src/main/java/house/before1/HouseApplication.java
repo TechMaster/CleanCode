@@ -4,6 +4,9 @@ import house.model.Garage;
 import house.model.Garden;
 import house.model.SwimmingPool;
 
+/**
+ * Idea 1 - Create subclasses
+ */
 public class HouseApplication {
 
     public static void main(String[] args) {
@@ -19,4 +22,5 @@ public class HouseApplication {
         // House with garage
         HouseWithGarden houseWithGarden = new HouseWithGarden(2, 1, 1, new Garden());
     }
+
 }

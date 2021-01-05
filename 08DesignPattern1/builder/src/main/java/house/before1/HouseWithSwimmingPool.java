@@ -10,4 +10,5 @@ public class HouseWithSwimmingPool extends House {
         super(windows, doors, rooms);
         this.swimmingPool = swimmingPool;
     }
+
 }

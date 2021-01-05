@@ -1,6 +1,8 @@
 package logistics.after;
 
-// Creator
+/**
+ * Creator
+ */
 public class TransportFactory {
 
     public Transport createTransport(String location) {

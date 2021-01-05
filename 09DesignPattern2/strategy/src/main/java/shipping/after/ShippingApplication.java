@@ -1,6 +1,12 @@
 package shipping.after;
 
-// Client
+import shipping.after.strategies.DNStrategy;
+import shipping.after.strategies.HCMStrategy;
+import shipping.after.strategies.HNStrategy;
+
+/**
+ * Client
+ */
 public class ShippingApplication {
 
     public static void main(String[] args) {

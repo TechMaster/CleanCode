@@ -1,6 +1,8 @@
 package shipping.after;
 
-// Context
+/**
+ * Context
+ */
 public class ShippingService {
 
     private ShippingStrategy strategy;

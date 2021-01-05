@@ -1,6 +1,8 @@
 package data_mining.after;
 
-// Client
+/**
+ * Client
+ */
 public class DataMiningApplication {
 
     public static void main(String[] args) {

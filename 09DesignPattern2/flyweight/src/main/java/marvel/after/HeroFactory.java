@@ -1,8 +1,11 @@
-package marvel;
+package marvel.after;
 
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Cache
+ */
 public class HeroFactory {
 
     private final Map<String, Hero> cache = new HashMap<>();
@@ -21,4 +24,5 @@ public class HeroFactory {
         System.out.printf("%s was created\n", name);
         return hero;
     }
+
 }

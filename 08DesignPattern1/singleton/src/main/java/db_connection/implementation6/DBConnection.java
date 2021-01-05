@@ -1,6 +1,8 @@
 package db_connection.implementation6;
 
-// Bill Pugh
+/**
+ * Bill Pugh
+ */
 public class DBConnection {
 
     private DBConnection() throws InterruptedException {

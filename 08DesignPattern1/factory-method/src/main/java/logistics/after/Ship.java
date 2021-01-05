@@ -1,6 +1,8 @@
 package logistics.after;
 
-// Concrete product
+/**
+ * Concrete product
+ */
 public class Ship implements Transport {
 
     @Override

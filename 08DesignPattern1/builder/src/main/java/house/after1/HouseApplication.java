@@ -4,6 +4,9 @@ import house.model.Garage;
 import house.model.Garden;
 import house.model.SwimmingPool;
 
+/**
+ * Solution 1 - Create builder class into product class
+ */
 public class HouseApplication {
 
     public static void main(String[] args) {
@@ -22,4 +25,5 @@ public class HouseApplication {
                 .garden(new Garden())
                 .build();
     }
+
 }

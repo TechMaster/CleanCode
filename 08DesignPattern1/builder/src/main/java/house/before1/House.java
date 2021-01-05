@@ -16,4 +16,5 @@ public class House {
         this.doors = doors;
         this.rooms = rooms;
     }
+
 }

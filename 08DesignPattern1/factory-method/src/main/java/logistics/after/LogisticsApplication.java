@@ -1,5 +1,8 @@
 package logistics.after;
 
+/**
+ * Client
+ */
 public class LogisticsApplication {
 
     public static void main(String[] args) {

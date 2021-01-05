@@ -1,6 +1,8 @@
 package db_connection.implementation2;
 
-// Static block
+/**
+ * Static block
+ */
 public class DBConnection {
 
     private static DBConnection INSTANCE;

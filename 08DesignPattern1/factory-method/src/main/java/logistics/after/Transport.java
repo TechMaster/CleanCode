@@ -1,6 +1,8 @@
 package logistics.after;
 
-// Product
+/**
+ * Product
+ */
 public interface Transport {
 
     void deliver(String goods, String location);

@@ -10,4 +10,5 @@ public class HouseWithGarage extends House {
         super(windows, doors, rooms);
         this.garage = garage;
     }
+
 }

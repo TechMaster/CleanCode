@@ -1,4 +1,4 @@
-package marvel;
+package marvel.after;
 
 public class Hero {
 
@@ -14,4 +14,5 @@ public class Hero {
     public String getName() {
         return name;
     }
+
 }

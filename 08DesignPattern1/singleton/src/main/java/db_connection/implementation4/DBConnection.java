@@ -1,6 +1,8 @@
 package db_connection.implementation4;
 
-// Lazy initialization thread-safe
+/**
+ * Lazy initialization thread-safe
+ */
 public class DBConnection {
 
     private static DBConnection INSTANCE;

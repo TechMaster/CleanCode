@@ -28,4 +28,5 @@ public class House {
         this.swimmingPool = swimmingPool;
         this.garden = garden;
     }
+
 }

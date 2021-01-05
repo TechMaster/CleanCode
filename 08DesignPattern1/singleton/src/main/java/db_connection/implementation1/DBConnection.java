@@ -1,6 +1,8 @@
 package db_connection.implementation1;
 
-// Eager initialization
+/**
+ * Eager initialization
+ */
 public class DBConnection {
 
     private static DBConnection INSTANCE = new DBConnection();

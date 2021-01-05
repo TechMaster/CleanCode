@@ -5,6 +5,9 @@ import data_mining.model.RawData;
 
 import java.io.File;
 
+/**
+ * Abstract class
+ */
 public abstract class DataMiner {
 
     public void mine(String path) {

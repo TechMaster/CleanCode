@@ -10,4 +10,5 @@ public class HouseWithGarden extends House {
         super(windows, doors, rooms);
         this.garden = garden;
     }
+
 }

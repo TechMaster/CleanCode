@@ -13,7 +13,8 @@ public class House {
     private SwimmingPool swimmingPool;
     private Garden garden;
 
-    private House() {}
+    private House() {
+    }
 
     public int getWindows() {
         return windows;
@@ -40,6 +41,7 @@ public class House {
     }
 
     public static class HouseBuilder {
+
         private int windows;
         private int doors;
         private int rooms;
@@ -87,6 +89,7 @@ public class House {
             house.garden = this.garden;
             return house;
         }
+
     }
 
 }

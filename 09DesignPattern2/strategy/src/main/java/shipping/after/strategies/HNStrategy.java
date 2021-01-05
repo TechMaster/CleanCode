@@ -1,6 +1,10 @@
-package shipping.after;
+package shipping.after.strategies;
 
-// Concrete strategy
+import shipping.after.ShippingStrategy;
+
+/**
+ * Concrete strategy
+ */
 public class HNStrategy implements ShippingStrategy {
 
     @Override

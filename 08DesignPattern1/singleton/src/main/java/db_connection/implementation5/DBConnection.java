@@ -1,6 +1,8 @@
 package db_connection.implementation5;
 
-// Lazy initialization double check locking
+/**
+ * Lazy initialization double check locking
+ */
 public class DBConnection {
 
     private static volatile DBConnection INSTANCE;

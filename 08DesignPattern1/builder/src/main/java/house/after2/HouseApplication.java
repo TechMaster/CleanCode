@@ -4,6 +4,9 @@ import house.model.Garage;
 import house.model.Garden;
 import house.model.SwimmingPool;
 
+/**
+ * Solution 2 - Use @Builder of Lombok
+ */
 public class HouseApplication {
 
     public static void main(String[] args) {
@@ -24,4 +27,5 @@ public class HouseApplication {
                 .garden(new Garden())
                 .build();
     }
+
 }
