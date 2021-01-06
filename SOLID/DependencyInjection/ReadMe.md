@@ -8,16 +8,22 @@ Dependency Injection, viết tắt là DI, dịch thô là "tiêm vào sự ph�
 
 Kỹ thuật DI có mặt ở khắp mọi nơi, đặc biệt trong ngành sản xuất máy móc, thiết bị và cả xây dựng.
 
-Ví dụ 1: Lắp ráp máy tính để bàn. Ban đầu tôi mua một main board. Sau đó tôi mua bổ xung CPU, RAM, card đồ hoạ, ổ cứng hoặc ổ SSD.
+**Ví dụ 1: Lắp ráp máy tính để bàn**
+
+Ban đầu tôi mua một main board. Sau đó tôi mua bổ xung CPU, RAM, card đồ hoạ, ổ cứng hoặc ổ SSD.
 Nhờ mainboard và các thành phần thiết kế tuân thủ theo các chuẩn interface standard (CPU socket, DDR3/DDR4, SATA, USB...) mà tôi có thể tuỳ chọn các thành phần khi lắp ráp.
 Một số thiết bị ngoại vi như web cam, máy in, bảng vẽ có thể trang bị sau tuỳ vào yêu cầu của chủ nhân (lazy loading)
 ![](PC.jpg)
 
-Ví dụ 2: Nhà máy Compal Đài Loan, chuyên gia công sản xuất OEM laptop cho Dell, HP và Compaq. Khi Compal nhận được yêu cầu từ các Dell, HP và Compaq, họ sẽ báo giá lại chi phí sản xuất, thời gian giao hàng. Khi hợp đồng được ký kết, Compal tiếp tục đặt hàng linh kiện từ: CPU <- Intel, AMD, Hard Disk <-- Western Digital, Seagate, Corner, Fujisu, Hitachi, RAM <-- Samsung, Hyunix, Intel...
+**Ví dụ 2: Nhà máy Compal Đài Loan, chuyên gia công sản xuất OEM laptop cho Dell, HP và Compaq.**
+
+Khi Compal nhận được yêu cầu từ các Dell, HP và Compaq, họ sẽ báo giá lại chi phí sản xuất, thời gian giao hàng. Khi hợp đồng được ký kết, Compal tiếp tục đặt hàng linh kiện từ: CPU <- Intel, AMD, Hard Disk <-- Western Digital, Seagate, Corner, Fujisu, Hitachi, RAM <-- Samsung, Hyunix, Intel...
 
 Công việc của Compal thực chất họ đang tiêm (inject) các thành phần phụ thuộc (dependency) vào sản phẩm cuối cùng. Dây truyền của Compal ảo diệu đến mức hôm nay họ có thể sản xuất laptop cho HP, nhưng ngay ngày mai, đổi đi một số linh kiện họ có thể sản xuất laptop cho Dell.
 
-Ví dụ 3: Khi bán chung cư, công ty bán cho khách hàng nhiều lựa chọn:
+**Ví dụ 3: Bán chung cư**
+
+Công ty bán cho khách hàng nhiều lựa chọn:
 - Căn hộ xây thô có đủ đường điện, nước, khách hàng tự làm nốt
 - Căn hộ đã có sàn gạch hoặc gàn gỗ
 - Căn hộ đầy đủ sàn gỗ, tủ bếp, tủ quần áo, điều hoà, đèn...
