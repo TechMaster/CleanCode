@@ -61,5 +61,7 @@ Dưới đây tôi tạo ra các ví dụ minh hoạ cho DI sử dụng thư vi�
 
 ## Tham khảo
 Các bạn nên tham khảo 2 bài viết rất dễ hiểu của giảng viên Nam Loda.me tại đây
-1. [Spring Boot 1: Hướng dẫn Component và Autowired](https://techmaster.vn/posts/36165/spring-boot-1-huong-dan-component-va-autowired)
-2. [Spring Boot 2: Autowired - Primary - Qualifier](https://techmaster.vn/posts/36167/spring-boot-2-autowired-primary-qualifier)
+1. [YouTube Dependency Injection](https://youtu.be/IKD2-MAkXyQ)
+2. [Wikipedia Dependency Injection](https://en.wikipedia.org/wiki/Dependency_injection)
+3. [Spring Boot 1: Hướng dẫn Component và Autowired](https://techmaster.vn/posts/36165/spring-boot-1-huong-dan-component-va-autowired)
+4. [Spring Boot 2: Autowired - Primary - Qualifier](https://techmaster.vn/posts/36167/spring-boot-2-autowired-primary-qualifier)
