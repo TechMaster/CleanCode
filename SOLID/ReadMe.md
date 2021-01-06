@@ -5,4 +5,4 @@ Danh sách các ví dụ mã nguồn kèm giải thích.
 2. [Open / Close Principle](solid/OpenClose.md)
 3. [Liskov Principle](Liskov/ReadMe.md)
 4. [Interface Segregation Principle](InterfaceSegeration/ReadMe.md)
-5. [Dependency Injection Principle](https://github.com/TechMaster/SpringBootBasic/tree/main/bean)
+5. [Dependency Injection Principle](DependencyInjection)
