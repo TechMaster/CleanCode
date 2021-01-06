@@ -37,5 +37,4 @@ public class HealthService {
     return weight / (height * height);
   }
 
-  private String 
 }
