@@ -40,6 +40,18 @@ public class House {
         return garden;
     }
 
+    @Override
+    public String toString() {
+        return "House{" +
+                "windows=" + windows +
+                ", doors=" + doors +
+                ", rooms=" + rooms +
+                ", garage=" + garage +
+                ", swimmingPool=" + swimmingPool +
+                ", garden=" + garden +
+                '}';
+    }
+
     public static class HouseBuilder {
 
         private int windows;

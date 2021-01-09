@@ -6,9 +6,9 @@ package logistics.after;
 public class TransportFactory {
 
     public Transport createTransport(String location) {
-        if (location.equals("HCM")) {
+        if ("HCM".equalsIgnoreCase(location)) {
             return new Train();
-        } else if (location.equals("Foreign")) {
+        } else if ("Foreign".equalsIgnoreCase(location)) {
             return new Ship();
         } else {
             return new Truck();

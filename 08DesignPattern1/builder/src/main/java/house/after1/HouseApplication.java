@@ -15,6 +15,7 @@ public class HouseApplication {
                 .doors(1)
                 .rooms(1)
                 .build();
+        System.out.println(simpleHouse);
 
         House advancedHouse = new House.HouseBuilder()
                 .windows(4)
@@ -24,6 +25,7 @@ public class HouseApplication {
                 .swimmingPool(new SwimmingPool())
                 .garden(new Garden())
                 .build();
+        System.out.println(advancedHouse);
     }
 
 }
