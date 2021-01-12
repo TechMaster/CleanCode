@@ -6,7 +6,9 @@ import registration.dto.RegisterDto;
 import registration.factory.UserFactory;
 import registration.model.User;
 
-// Singleton bean
+/**
+ * Singleton bean
+ */
 @Service
 public class RegistrationService {
 
@@ -17,4 +19,5 @@ public class RegistrationService {
         User user = userFactory.createUser(dto);
         user.register();
     }
+
 }

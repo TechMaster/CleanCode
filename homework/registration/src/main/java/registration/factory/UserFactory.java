@@ -10,7 +10,9 @@ import registration.model.UserInfo;
 
 import java.util.UUID;
 
-// Factory method pattern: Creator
+/**
+ * Factory method pattern: Creator
+ */
 @Component
 public class UserFactory {
 
@@ -51,4 +53,5 @@ public class UserFactory {
     private String randomId() {
         return UUID.randomUUID().toString();
     }
+
 }

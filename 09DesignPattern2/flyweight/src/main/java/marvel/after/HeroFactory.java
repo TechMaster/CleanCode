@@ -4,24 +4,24 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Cache
+ * Flyweight factory
  */
 public class HeroFactory {
 
     private final Map<String, Hero> cache = new HashMap<>();
 
-    public Hero getHero(String name) {
-        Hero hero = cache.get(name);
+    public Hero getHero(String heroName) {
+        Hero hero = cache.get(heroName);
         if (hero != null) {
             return hero;
         }
-        return createHero(name);
+        return createHero(heroName);
     }
 
-    private Hero createHero(String name) {
-        Hero hero = new Hero(name);
-        cache.put(name, hero);
-        System.out.printf("%s was created\n", name);
+    private Hero createHero(String heroName) {
+        Hero hero = new Hero(heroName);
+        cache.put(heroName, hero);
+        System.out.printf("%s was created\n", heroName);
         return hero;
     }
 

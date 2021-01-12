@@ -1,10 +1,10 @@
 package registration.model;
 
-import lombok.Data;
 import registration.enums.Gender;
 
-// Using Builder pattern here
-@Data
+/**
+ * Using Builder pattern here
+ */
 public class UserInfo {
 
     private String id;
@@ -38,6 +38,17 @@ public class UserInfo {
 
     public Gender getGender() {
         return gender;
+    }
+
+    @Override
+    public String toString() {
+        return "UserInfo{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", age=" + age +
+                ", gender=" + gender +
+                '}';
     }
 
     public static class UserBuilder {
@@ -86,4 +97,5 @@ public class UserInfo {
             return userInfo;
         }
     }
+
 }

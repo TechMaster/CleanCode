@@ -2,11 +2,8 @@ package marvel.before;
 
 public class Player {
 
-    // Được dùng để phân biệt người chơi
-    private int id;
-
     // Tên của nhân vật
-    private String name;
+    private String heroName;
 
     // Một đối tượng tiêu tốn kha khá bộ nhớ, được dùng để vẽ hình ảnh của nhân vật lên giao diện
     private Graph graph;
@@ -15,13 +12,15 @@ public class Player {
     private int x;
     private int y;
 
-    public Player(int id, String name, Graph graph, int x, int y) {
-        this.id = id;
-        this.name = name;
-        this.graph = graph;
+    public Player(String heroName, int x, int y) {
+        this.heroName = heroName;
+        this.graph = new Graph();
         this.x = x;
         this.y = y;
-        System.out.printf("Create player %s at position (%d, %d)%n", name, x, y);
+        System.out.printf("Create player %s at position (%d, %d)%n", heroName, x, y);
+    }
+
+    public static class Graph {
     }
 
 }

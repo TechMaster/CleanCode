@@ -16,4 +16,5 @@ public class RegisterDto {
     private Gender gender;
 
     private RegisterMode mode;
+
 }

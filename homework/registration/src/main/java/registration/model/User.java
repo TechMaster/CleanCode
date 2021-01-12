@@ -1,6 +1,8 @@
 package registration.model;
 
-// Factory method pattern: Product
+/**
+ * Factory method pattern: Product
+ */
 public abstract class User {
 
     protected UserInfo userInfo;
@@ -10,4 +12,5 @@ public abstract class User {
     }
 
     public abstract void register();
+
 }

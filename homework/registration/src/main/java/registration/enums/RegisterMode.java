@@ -4,5 +4,6 @@ public enum RegisterMode {
 
     ADMIN,
 
-    MEMBER;
+    MEMBER
+
 }

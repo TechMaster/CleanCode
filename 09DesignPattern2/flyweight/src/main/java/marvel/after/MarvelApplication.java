@@ -12,8 +12,8 @@ public class MarvelApplication {
 
     public static void main(String[] args) {
         HeroFactory heroFactory = new HeroFactory();
-        for (int id = 1; id <= 5; id++) {
-            Player player = new Player(id);
+        for (int i = 1; i <= 5; i++) {
+            Player player = new Player();
             String heroName = HERO_NAMES[RANDOM.nextInt(HERO_NAMES.length)];
             Hero hero = heroFactory.getHero(heroName);
             player.join(hero);

@@ -9,12 +9,12 @@ public class MarvelApplication {
 
     public static void main(String[] args) {
         // Join game
-        new Player(1, HERO_NAMES[0], new Graph(), RANDOM.nextInt(100), RANDOM.nextInt(100));
+        new Player(HERO_NAMES[0], RANDOM.nextInt(100), RANDOM.nextInt(100));
 
         // Move
-        new Player(1, HERO_NAMES[0], new Graph(), RANDOM.nextInt(100), RANDOM.nextInt(100));
-        new Player(1, HERO_NAMES[0], new Graph(), RANDOM.nextInt(100), RANDOM.nextInt(100));
-        new Player(1, HERO_NAMES[0], new Graph(), RANDOM.nextInt(100), RANDOM.nextInt(100));
+        new Player(HERO_NAMES[0], RANDOM.nextInt(100), RANDOM.nextInt(100));
+        new Player(HERO_NAMES[0], RANDOM.nextInt(100), RANDOM.nextInt(100));
+        new Player(HERO_NAMES[0], RANDOM.nextInt(100), RANDOM.nextInt(100));
     }
 
 }

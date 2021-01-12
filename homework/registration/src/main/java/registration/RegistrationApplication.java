@@ -37,4 +37,5 @@ public class RegistrationApplication implements CommandLineRunner {
 		registerMemberDto.setMode(RegisterMode.MEMBER);
 		registrationService.register(registerMemberDto);
 	}
+
 }
