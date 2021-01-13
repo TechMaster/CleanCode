@@ -21,4 +21,4 @@
 - [Buổi 04](04Control): Tối ưu if then else, for loop
 - [Buổi 05](05OOP): Lập trình hướng đối tượng
 - [Buổi 08](08DesignPattern1): OOP Design Patterns 01
-- [Buổi 09](08DesignPattern1): OOP Design Patterns 02
+- [Buổi 09](09DesignPattern2): OOP Design Patterns 02
