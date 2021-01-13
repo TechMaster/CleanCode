@@ -20,6 +20,14 @@ public class UserInfo {
     private UserInfo() {
     }
 
+    private UserInfo(Builder builder) {
+        this.id = builder.id;
+        this.name = builder.name;
+        this.email = builder.email;
+        this.age = builder.age;
+        this.gender = builder.gender;
+    }
+
     public String getId() {
         return id;
     }
@@ -51,7 +59,7 @@ public class UserInfo {
                 '}';
     }
 
-    public static class UserBuilder {
+    public static class Builder {
         private String id;
 
         private String name;
@@ -62,27 +70,27 @@ public class UserInfo {
 
         private Gender gender;
 
-        public UserBuilder id(String id) {
+        public Builder id(String id) {
             this.id = id;
             return this;
         }
 
-        public UserBuilder name(String name) {
+        public Builder name(String name) {
             this.name = name;
             return this;
         }
 
-        public UserBuilder email(String email) {
+        public Builder email(String email) {
             this.email = email;
             return this;
         }
 
-        public UserBuilder age(int age) {
+        public Builder age(int age) {
             this.age = age;
             return this;
         }
 
-        public UserBuilder gender(Gender gender) {
+        public Builder gender(Gender gender) {
             this.gender = gender;
             return this;
         }
@@ -95,6 +103,10 @@ public class UserInfo {
             userInfo.age = this.age;
             userInfo.gender = this.gender;
             return userInfo;
+        }
+
+        public UserInfo build2() {
+            return new UserInfo(this);
         }
     }
 

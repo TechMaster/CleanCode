@@ -27,7 +27,7 @@ public class UserFactory {
     }
 
     private User createAdmin(RegisterDto dto) {
-        UserInfo.UserBuilder userBuilder = new UserInfo.UserBuilder();
+        UserInfo.Builder userBuilder = new UserInfo.Builder();
         map(userBuilder, dto);
         userBuilder.id("admin-" + randomId());
         UserInfo userInfo = userBuilder.build();
@@ -35,14 +35,14 @@ public class UserFactory {
     }
 
     private User createMember(RegisterDto dto) {
-        UserInfo.UserBuilder userBuilder = new UserInfo.UserBuilder();
+        UserInfo.Builder userBuilder = new UserInfo.Builder();
         map(userBuilder, dto);
         userBuilder.id("member-" + randomId());
         UserInfo userInfo = userBuilder.build();
         return new Member(userInfo);
     }
 
-    private void map(UserInfo.UserBuilder builder, RegisterDto dto) {
+    private void map(UserInfo.Builder builder, RegisterDto dto) {
         builder
             .name(dto.getName())
             .email(dto.getEmail())
