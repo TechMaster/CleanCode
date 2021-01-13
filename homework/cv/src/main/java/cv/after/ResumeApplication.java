@@ -1,6 +1,6 @@
 package cv.after;
 
-import cv.after.export.ResumeFormat;
+import cv.after.export.FormatType;
 import cv.after.model.CreateResumeRequest;
 import cv.after.model.UserInfo;
 import cv.after.template.TemplateType;
@@ -32,7 +32,7 @@ public class ResumeApplication implements CommandLineRunner {
                 .build();
         request1.setUserInfo(userInfo1);
         request1.setTemplateType(TemplateType.BLUE);
-        request1.setResumeFormat(ResumeFormat.PDF);
+        request1.setFormatType(FormatType.PDF);
         resumeService.createResume(request1);
 
         CreateResumeRequest request2 = new CreateResumeRequest();
@@ -42,7 +42,7 @@ public class ResumeApplication implements CommandLineRunner {
                 .build();
         request2.setUserInfo(userInfo2);
         request2.setTemplateType(TemplateType.RED);
-        request2.setResumeFormat(ResumeFormat.WORD);
-        resumeService.createResume(request1);
+        request2.setFormatType(FormatType.WORD);
+        resumeService.createResume(request2);
     }
 }

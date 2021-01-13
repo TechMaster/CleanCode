@@ -1,6 +1,6 @@
 package cv.before.model;
 
-import cv.before.export.ResumeFormat;
+import cv.before.export.FormatType;
 import cv.before.template.TemplateType;
 import lombok.Data;
 
@@ -11,6 +11,6 @@ public class CreateResumeRequest {
 
     private TemplateType templateType;
 
-    private ResumeFormat resumeFormat;
+    private FormatType formatType;
 
 }

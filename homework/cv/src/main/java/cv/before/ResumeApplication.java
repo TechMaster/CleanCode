@@ -1,6 +1,6 @@
 package cv.before;
 
-import cv.before.export.ResumeFormat;
+import cv.before.export.FormatType;
 import cv.before.model.CreateResumeRequest;
 import cv.before.model.UserInfo;
 import cv.before.template.TemplateType;
@@ -26,7 +26,7 @@ public class ResumeApplication implements CommandLineRunner {
                 Arrays.asList("JAVA", "HIBERNATE", "SPRING"));
         request1.setUserInfo(userInfo1);
         request1.setTemplateType(TemplateType.BLUE);
-        request1.setResumeFormat(ResumeFormat.PDF);
+        request1.setFormatType(FormatType.PDF);
         resumeService.createResume(request1);
 
         CreateResumeRequest request2 = new CreateResumeRequest();
@@ -34,7 +34,7 @@ public class ResumeApplication implements CommandLineRunner {
                 Arrays.asList("JS", "ANGULAR"));
         request2.setUserInfo(userInfo2);
         request2.setTemplateType(TemplateType.RED);
-        request2.setResumeFormat(ResumeFormat.WORD);
+        request2.setFormatType(FormatType.WORD);
         resumeService.createResume(request2);
     }
 

@@ -1,6 +1,6 @@
 package cv.before;
 
-import cv.before.export.ResumeFormat;
+import cv.before.export.FormatType;
 import cv.before.model.CreateResumeRequest;
 import cv.before.model.UserInfo;
 import cv.before.template.BlueTemplate;
@@ -21,7 +21,7 @@ public class ResumeService {
         String templateHTML = combine(request.getTemplateType(), request.getUserInfo());
         System.out.println("Combine template with user info done");
 
-        File output = export(templateHTML, request.getResumeFormat());
+        File output = export(templateHTML, request.getFormatType());
         System.out.println("Export output done");
 
         download(output);
@@ -53,11 +53,11 @@ public class ResumeService {
      *
      * @return output as File object
      */
-    private File export(String templateHTML, ResumeFormat resumeFormat) {
-        if (resumeFormat == ResumeFormat.PDF) {
+    private File export(String templateHTML, FormatType formatType) {
+        if (formatType == FormatType.PDF) {
             // Using external libraries to create PDF file
             return new File("/path/to/output");
-        } else if (resumeFormat == ResumeFormat.WORD) {
+        } else if (formatType == FormatType.WORD) {
             // Using external libraries to create Word file
             return new File("/path/to/output");
         } else {

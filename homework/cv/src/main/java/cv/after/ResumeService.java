@@ -26,7 +26,7 @@ public class ResumeService {
         String templateHTML = templateService.combine(request.getTemplateType(), request.getUserInfo());
         System.out.println("Combine template with user info done");
 
-        File output = exportService.export(templateHTML, request.getResumeFormat());
+        File output = exportService.export(templateHTML, request.getFormatType());
         System.out.println("Export output done");
 
         downloadService.download(output);

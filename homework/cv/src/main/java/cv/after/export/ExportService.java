@@ -17,13 +17,13 @@ public class ExportService {
      *
      * @return output as File object
      */
-    public File export(String templateHTML, ResumeFormat resumeFormat) {
-        ExportStrategy exportStrategy = lookupStrategy(resumeFormat);
+    public File export(String templateHTML, FormatType formatType) {
+        ExportStrategy exportStrategy = lookupStrategy(formatType);
         return exportStrategy.export(templateHTML);
     }
 
-    private ExportStrategy lookupStrategy(ResumeFormat resumeFormat) {
-        String beanName = resumeFormat.name().toLowerCase() + "Strategy";
+    private ExportStrategy lookupStrategy(FormatType formatType) {
+        String beanName = formatType.name().toLowerCase() + "Strategy";
         ExportStrategy exportStrategy = exportStrategies.get(beanName);
         if (exportStrategy == null) {
             throw new UnsupportedOperationException("Unsupported format");
