@@ -23,10 +23,10 @@ public class ResumeService {
     public void createResume(CreateResumeRequest request) {
         System.out.printf("Request: %s%n", request);
 
-        String templateHTML = templateService.combine(request.getResumeTemplates(), request.getUserInfo());
+        String templateHTML = templateService.combine(request.getTemplateType(), request.getUserInfo());
         System.out.println("Combine template with user info done");
 
-        File output = exportService.export(templateHTML, request.getResumeFormats());
+        File output = exportService.export(templateHTML, request.getResumeFormat());
         System.out.println("Export output done");
 
         downloadService.download(output);

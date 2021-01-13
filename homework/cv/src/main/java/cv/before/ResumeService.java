@@ -1,12 +1,12 @@
 package cv.before;
 
-import cv.before.export.ResumeFormats;
+import cv.before.export.ResumeFormat;
 import cv.before.model.CreateResumeRequest;
 import cv.before.model.UserInfo;
 import cv.before.template.BlueTemplate;
 import cv.before.template.GreenTemplate;
 import cv.before.template.RedTemplate;
-import cv.before.template.ResumeTemplates;
+import cv.before.template.TemplateType;
 
 import java.io.File;
 
@@ -18,10 +18,10 @@ public class ResumeService {
     public void createResume(CreateResumeRequest request) {
         System.out.printf("Request: %s%n", request);
 
-        String templateHTML = combine(request.getResumeTemplates(), request.getUserInfo());
+        String templateHTML = combine(request.getTemplateType(), request.getUserInfo());
         System.out.println("Combine template with user info done");
 
-        File output = export(templateHTML, request.getResumeFormats());
+        File output = export(templateHTML, request.getResumeFormat());
         System.out.println("Export output done");
 
         download(output);
@@ -30,16 +30,17 @@ public class ResumeService {
 
     /**
      * Combine template with user info from request
+     *
      * @return template as HTML string
      */
-    private String combine(ResumeTemplates resumeTemplates, UserInfo userInfo) {
-        if (resumeTemplates == ResumeTemplates.BLUE) {
+    private String combine(TemplateType templateType, UserInfo userInfo) {
+        if (templateType == TemplateType.BLUE) {
             BlueTemplate blueTemplate = new BlueTemplate();
             return blueTemplate.combine(userInfo);
-        } else if (resumeTemplates == ResumeTemplates.GREEN) {
+        } else if (templateType == TemplateType.GREEN) {
             GreenTemplate greenTemplate = new GreenTemplate();
             return greenTemplate.combine(userInfo);
-        } else if (resumeTemplates == ResumeTemplates.RED) {
+        } else if (templateType == TemplateType.RED) {
             RedTemplate redTemplate = new RedTemplate();
             return redTemplate.combine(userInfo);
         } else {
@@ -49,13 +50,14 @@ public class ResumeService {
 
     /**
      * Export HTML string to requested format
+     *
      * @return output as File object
      */
-    private File export(String templateHTML, ResumeFormats resumeFormats) {
-        if (resumeFormats == ResumeFormats.PDF) {
+    private File export(String templateHTML, ResumeFormat resumeFormat) {
+        if (resumeFormat == ResumeFormat.PDF) {
             // Using external libraries to create PDF file
             return new File("/path/to/output");
-        } else if (resumeFormats == ResumeFormats.WORD) {
+        } else if (resumeFormat == ResumeFormat.WORD) {
             // Using external libraries to create Word file
             return new File("/path/to/output");
         } else {

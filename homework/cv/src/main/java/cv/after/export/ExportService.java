@@ -14,15 +14,16 @@ public class ExportService {
 
     /**
      * Export HTML string to requested format
+     *
      * @return output as File object
      */
-    public File export(String templateHTML, ResumeFormats resumeFormats) {
-        ExportStrategy exportStrategy = lookupStrategy(resumeFormats);
+    public File export(String templateHTML, ResumeFormat resumeFormat) {
+        ExportStrategy exportStrategy = lookupStrategy(resumeFormat);
         return exportStrategy.export(templateHTML);
     }
 
-    private ExportStrategy lookupStrategy(ResumeFormats resumeFormats) {
-        String beanName = resumeFormats.name().toLowerCase() + "Strategy";
+    private ExportStrategy lookupStrategy(ResumeFormat resumeFormat) {
+        String beanName = resumeFormat.name().toLowerCase() + "Strategy";
         ExportStrategy exportStrategy = exportStrategies.get(beanName);
         if (exportStrategy == null) {
             throw new UnsupportedOperationException("Unsupported format");

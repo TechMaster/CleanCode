@@ -1,6 +1,6 @@
 package cv.after.template.element.paragraph;
 
-public enum  ParagraphTypes {
+public enum ParagraphType {
 
     DEFAULT
 

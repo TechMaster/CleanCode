@@ -1,14 +1,11 @@
 package cv.after.template.element.line;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class LineFactory {
 
-    public Line create(LineTypes type) {
-        if (type == LineTypes.DEFAULT) {
+    public static Line create(LineType type) {
+        if (type == LineType.DEFAULT) {
             Line line = new Line();
-            // Set styles for line
+            // Set styles for default line
             return line;
         }
         return new Line();

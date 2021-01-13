@@ -3,7 +3,7 @@ package cv.before.template;
 /**
  * Supported templates
  */
-public enum ResumeTemplates {
+public enum TemplateType {
 
     BLUE,
     GREEN,

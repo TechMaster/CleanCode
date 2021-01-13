@@ -1,7 +1,7 @@
 package cv.after.model;
 
-import cv.after.export.ResumeFormats;
-import cv.after.template.ResumeTemplates;
+import cv.after.export.ResumeFormat;
+import cv.after.template.TemplateType;
 import lombok.Data;
 
 @Data
@@ -9,8 +9,8 @@ public class CreateResumeRequest {
 
     private UserInfo userInfo;
 
-    private ResumeTemplates resumeTemplates;
+    private TemplateType templateType;
 
-    private ResumeFormats resumeFormats;
+    private ResumeFormat resumeFormat;
 
 }

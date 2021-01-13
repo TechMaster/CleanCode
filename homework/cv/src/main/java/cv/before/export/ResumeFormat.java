@@ -3,7 +3,7 @@ package cv.before.export;
 /**
  * Supported formats
  */
-public enum ResumeFormats {
+public enum ResumeFormat {
 
     PDF,
     WORD

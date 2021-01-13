@@ -2,9 +2,9 @@ package cv.after.template;
 
 import cv.after.model.UserInfo;
 import cv.after.template.element.line.LineFactory;
-import cv.after.template.element.line.LineTypes;
+import cv.after.template.element.line.LineType;
 import cv.after.template.element.paragraph.ParagraphFactory;
-import cv.after.template.element.paragraph.ParagraphTypes;
+import cv.after.template.element.paragraph.ParagraphType;
 
 /**
  * Apply template method pattern here
@@ -14,13 +14,7 @@ public abstract class Template {
     protected TemplateLayout layout;
     protected UserInfo userInfo;
 
-    protected final ParagraphFactory paragraphFactory;
-    protected final LineFactory lineFactory;
-
-    public Template(ParagraphFactory paragraphFactory,
-                    LineFactory lineFactory) {
-        this.paragraphFactory = paragraphFactory;
-        this.lineFactory = lineFactory;
+    public Template() {
         this.layout = new TemplateLayout();
         drawHeader();
         drawBody();
@@ -28,15 +22,15 @@ public abstract class Template {
     }
 
     protected void drawHeader() {
-        layout.addElement(paragraphFactory.create(ParagraphTypes.DEFAULT, "Header"));
-        layout.addElement(lineFactory.create(LineTypes.DEFAULT));
+        layout.addElement(ParagraphFactory.create(ParagraphType.DEFAULT, "Header"));
+        layout.addElement(LineFactory.create(LineType.DEFAULT));
     }
 
     protected abstract void drawBody();
 
     private void drawFooter() {
-        layout.addElement(lineFactory.create(LineTypes.DEFAULT));
-        layout.addElement(paragraphFactory.create(ParagraphTypes.DEFAULT, "Footer"));
+        layout.addElement(LineFactory.create(LineType.DEFAULT));
+        layout.addElement(ParagraphFactory.create(ParagraphType.DEFAULT, "Footer"));
     }
 
     /**

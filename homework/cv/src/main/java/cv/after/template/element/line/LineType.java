@@ -1,6 +1,6 @@
 package cv.after.template.element.line;
 
-public enum LineTypes {
+public enum LineType {
 
     DEFAULT
 

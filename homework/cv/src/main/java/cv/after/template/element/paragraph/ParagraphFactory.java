@@ -1,14 +1,11 @@
 package cv.after.template.element.paragraph;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class ParagraphFactory {
 
-    public Paragraph create(ParagraphTypes type, String text) {
-        if (type == ParagraphTypes.DEFAULT) {
+    public static Paragraph create(ParagraphType type, String text) {
+        if (type == ParagraphType.DEFAULT) {
             Paragraph paragraph = new Paragraph(text);
-            // Set styles for paragraph
+            // Set styles for default paragraph
             return paragraph;
         }
         return new Paragraph(text);

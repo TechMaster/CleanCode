@@ -1,27 +1,20 @@
 package cv.after.template;
 
 import cv.after.model.UserInfo;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.Map;
-
 @Service
-@RequiredArgsConstructor
 public class TemplateService {
 
-    private final Map<String, Template> templates;
+    private final TemplateFactory templateFactory = new TemplateFactory();
 
     /**
      * Combine template with user info from request
+     *
      * @return template as HTML string
      */
-    public String combine(ResumeTemplates resumeTemplates, UserInfo userInfo) {
-        String beanName = resumeTemplates.name().toLowerCase() + "Template";
-        Template template = templates.get(beanName);
-        if (template == null) {
-            throw new UnsupportedOperationException("Unsupported template");
-        }
+    public String combine(TemplateType templateType, UserInfo userInfo) {
+        Template template = templateFactory.getTemplate(templateType);
         return template.combine(userInfo);
     }
 
