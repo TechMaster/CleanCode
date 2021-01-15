@@ -5,19 +5,20 @@ import house.model.Garden;
 import house.model.SwimmingPool;
 
 /**
- * Solution 1 - Create builder class into product class
+ * Solution 1 - Create Builder class into House class
+ * Initialize House object into build() method of Builder class
  */
 public class HouseApplication {
 
     public static void main(String[] args) {
-        House simpleHouse = new House.HouseBuilder()
+        House simpleHouse = new House.Builder()
                 .windows(2)
                 .doors(1)
                 .rooms(1)
                 .build();
         System.out.println(simpleHouse);
 
-        House advancedHouse = new House.HouseBuilder()
+        House advancedHouse = new House.Builder()
                 .windows(4)
                 .doors(2)
                 .rooms(3)

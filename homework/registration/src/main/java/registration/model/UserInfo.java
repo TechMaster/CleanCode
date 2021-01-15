@@ -20,14 +20,6 @@ public class UserInfo {
     private UserInfo() {
     }
 
-    private UserInfo(Builder builder) {
-        this.id = builder.id;
-        this.name = builder.name;
-        this.email = builder.email;
-        this.age = builder.age;
-        this.gender = builder.gender;
-    }
-
     public String getId() {
         return id;
     }
@@ -103,10 +95,6 @@ public class UserInfo {
             userInfo.age = this.age;
             userInfo.gender = this.gender;
             return userInfo;
-        }
-
-        public UserInfo build2() {
-            return new UserInfo(this);
         }
     }
 

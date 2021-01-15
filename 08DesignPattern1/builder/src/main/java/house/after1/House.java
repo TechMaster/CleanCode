@@ -13,9 +13,6 @@ public class House {
     private SwimmingPool swimmingPool;
     private Garden garden;
 
-    private House() {
-    }
-
     public int getWindows() {
         return windows;
     }
@@ -52,7 +49,7 @@ public class House {
                 '}';
     }
 
-    public static class HouseBuilder {
+    public static class Builder {
 
         private int windows;
         private int doors;
@@ -61,32 +58,32 @@ public class House {
         private SwimmingPool swimmingPool;
         private Garden garden;
 
-        public HouseBuilder windows(int windows) {
+        public Builder windows(int windows) {
             this.windows = windows;
             return this;
         }
 
-        public HouseBuilder doors(int doors) {
+        public Builder doors(int doors) {
             this.doors = doors;
             return this;
         }
 
-        public HouseBuilder rooms(int rooms) {
+        public Builder rooms(int rooms) {
             this.rooms = rooms;
             return this;
         }
 
-        public HouseBuilder garage(Garage garage) {
+        public Builder garage(Garage garage) {
             this.garage = garage;
             return this;
         }
 
-        public HouseBuilder swimmingPool(SwimmingPool swimmingPool) {
+        public Builder swimmingPool(SwimmingPool swimmingPool) {
             this.swimmingPool = swimmingPool;
             return this;
         }
 
-        public HouseBuilder garden(Garden garden) {
+        public Builder garden(Garden garden) {
             this.garden = garden;
             return this;
         }

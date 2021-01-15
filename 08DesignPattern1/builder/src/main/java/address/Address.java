@@ -53,7 +53,7 @@ public class Address {
                 '}';
     }
 
-    public static class AddressBuilder {
+    public static class Builder {
 
         private Integer number;
 
@@ -67,32 +67,32 @@ public class Address {
 
         private String province;
 
-        public AddressBuilder number(int number) {
+        public Builder number(int number) {
             this.number = number;
             return this;
         }
 
-        public AddressBuilder alley(String alley) {
+        public Builder alley(String alley) {
             this.alley = alley;
             return this;
         }
 
-        public AddressBuilder street(String street) {
+        public Builder street(String street) {
             this.street = street;
             return this;
         }
 
-        public AddressBuilder ward(String ward) {
+        public Builder ward(String ward) {
             this.ward = ward;
             return this;
         }
 
-        public AddressBuilder district(String district) {
+        public Builder district(String district) {
             this.district = district;
             return this;
         }
 
-        public AddressBuilder province(String province) {
+        public Builder province(String province) {
             this.province = province;
             return this;
         }
