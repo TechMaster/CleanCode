@@ -65,7 +65,8 @@
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger-ui</artifactId>
-			<version>3.0.0</version>
+			<!-- To fix conflict when combine Spring HATEOAS with Swagger -->
+			<version>2.8.0</version>
 		</dependency>
 	</dependencies>
 
