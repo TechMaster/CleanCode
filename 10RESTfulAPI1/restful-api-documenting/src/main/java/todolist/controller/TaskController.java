@@ -26,7 +26,7 @@ public class TaskController {
 
     private final TaskService taskService;
 
-    @GetMapping(value = "/api/v1/tasks")
+    @GetMapping("/api/v1/tasks")
     @ApiOperation("Get tasks")
     @ApiResponses({
             @ApiResponse(code = 200, message = "Get tasks successfully")

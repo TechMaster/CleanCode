@@ -22,7 +22,7 @@ public class TaskController {
 
     private final TaskService taskService;
 
-    @GetMapping(value = "/api/v1/tasks")
+    @GetMapping("/api/v1/tasks")
     public ResponseEntity<List<TaskDto>> getTasks() {
         List<TaskDto> response = taskService.getTasks();
         return new ResponseEntity<>(response, HttpStatus.OK);

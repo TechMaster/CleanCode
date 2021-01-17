@@ -22,14 +22,17 @@ public class TaskService {
     @Transactional(readOnly = true)
     public List<TaskDto> getTasks() {
         List<Task> tasks = taskRepository.findAll();
-        return tasks.stream().map(this::convertToTaskDto).collect(Collectors.toList());
+        return tasks
+                .stream()
+                .map(task -> modelMapper.map(task, TaskDto.class))
+                .collect(Collectors.toList());
     }
 
     @Transactional(readOnly = true)
     public TaskDto getTask(Integer taskId) {
         Task task = taskRepository.findById(taskId)
                 .orElseThrow(() -> new RuntimeException(String.format("Task not found: #%s", taskId)));
-        return convertToTaskDto(task);
+        return modelMapper.map(task, TaskDto.class);
     }
 
     @Transactional
@@ -43,7 +46,7 @@ public class TaskService {
         }
         modelMapper.map(taskDto, task);
         Task savedTask = taskRepository.save(task);
-        return convertToTaskDto(savedTask);
+        return modelMapper.map(savedTask, TaskDto.class);
     }
 
     @Transactional
@@ -51,10 +54,6 @@ public class TaskService {
         Task task = taskRepository.findById(taskId)
                 .orElseThrow(() -> new RuntimeException(String.format("Task not found: #%s", taskId)));
         taskRepository.delete(task);
-    }
-
-    private TaskDto convertToTaskDto(Task task) {
-        return modelMapper.map(task, TaskDto.class);
     }
 
 }

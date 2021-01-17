@@ -22,21 +22,19 @@ public class TaskService {
     @Transactional(readOnly = true)
     public List<TaskDtoV1> getTasksV1() {
         List<Task> tasks = taskRepository.findAll();
-        return tasks.stream().map(this::convertToTaskDtoV1).collect(Collectors.toList());
+        return tasks
+                .stream()
+                .map(task -> modelMapper.map(task, TaskDtoV1.class))
+                .collect(Collectors.toList());
     }
 
     @Transactional(readOnly = true)
     public List<TaskDtoV2> getTasksV2() {
         List<Task> tasks = taskRepository.findAll();
-        return tasks.stream().map(this::convertToTaskDtoV2).collect(Collectors.toList());
-    }
-
-    private TaskDtoV1 convertToTaskDtoV1(Task task) {
-        return modelMapper.map(task, TaskDtoV1.class);
-    }
-
-    private TaskDtoV2 convertToTaskDtoV2(Task task) {
-        return modelMapper.map(task, TaskDtoV2.class);
+        return tasks
+                .stream()
+                .map(task -> modelMapper.map(task, TaskDtoV2.class))
+                .collect(Collectors.toList());
     }
 
 }
