@@ -23,3 +23,4 @@
 - [Buổi 08](08DesignPattern1): OOP Design Patterns 01
 - [Buổi 09](09DesignPattern2): OOP Design Patterns 02
 - [Buổi 10](10RESTfulAPI1): Design RESTful API 01
+- [Buổi 11](11RESTfulAPI2): Design RESTful API 02
