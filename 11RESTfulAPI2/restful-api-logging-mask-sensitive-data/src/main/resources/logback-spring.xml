@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+            <layout class="todolist.configuration.logging.MaskingPatternLayout">
+                <maskingPattern>\"email\": \".*\"</maskingPattern>
+                <maskingPattern>\"password\": \".*\"</maskingPattern>
+                <pattern>%d [%thread] %-5level %logger{35} - %msg%n</pattern>
+            </layout>
+        </encoder>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="Console" />
+    </root>
+
+    <logger name="org.springframework.web.filter.CommonsRequestLoggingFilter" level="debug" additivity="false">
+        <appender-ref ref="Console" />
+    </logger>
+
+</configuration>
