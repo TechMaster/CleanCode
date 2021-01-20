@@ -1,6 +1,6 @@
 logging:
   level:
-    todolist: DEBUG
+    todolist.configuration.logging: DEBUG
 
 spring:
   datasource:
