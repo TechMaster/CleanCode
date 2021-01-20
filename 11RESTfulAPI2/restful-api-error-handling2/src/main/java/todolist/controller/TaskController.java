@@ -94,10 +94,4 @@ public class TaskController {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
-    @ExceptionHandler(ServiceRuntimeException.class)
-    public ResponseEntity<ApiError> handleServiceRuntimeException(ServiceRuntimeException ex) {
-        ApiError apiError = new ApiError(ex.getErrorCode(), ex.getMessage());
-        return new ResponseEntity<>(apiError, ex.getHttpStatus());
-    }
-
 }

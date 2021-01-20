@@ -5,9 +5,10 @@ import org.modelmapper.ModelMapper;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.server.ResponseStatusException;
 import todolist.dto.TaskDto;
 import todolist.entity.Task;
+import todolist.error.ErrorCodes;
+import todolist.error.ServiceRuntimeException;
 import todolist.repository.TaskRepository;
 
 import java.util.List;
@@ -33,8 +34,10 @@ public class TaskService {
     @Transactional(readOnly = true)
     public TaskDto getTask(Integer taskId) {
         Task task = taskRepository.findById(taskId)
-                .orElseThrow(() -> new ResponseStatusException(
-                        HttpStatus.NOT_FOUND, String.format("Task ID not found: %d", taskId)));
+                .orElseThrow(() -> new ServiceRuntimeException(
+                        HttpStatus.NOT_FOUND,
+                        ErrorCodes.TASK_E001,
+                        String.format("Task not found: #%s", taskId)));
         return modelMapper.map(task, TaskDto.class);
     }
 
@@ -45,8 +48,10 @@ public class TaskService {
             task = new Task();
         } else {
             task = taskRepository.findById(taskDto.getId())
-                    .orElseThrow(() -> new ResponseStatusException(
-                            HttpStatus.NOT_FOUND, String.format("Task ID not found: %d", taskDto.getId())));
+                    .orElseThrow(() -> new ServiceRuntimeException(
+                            HttpStatus.NOT_FOUND,
+                            ErrorCodes.TASK_E001,
+                            String.format("Task not found: #%s", taskDto.getId())));
         }
         modelMapper.map(taskDto, task);
         Task savedTask = taskRepository.save(task);
@@ -56,8 +61,10 @@ public class TaskService {
     @Transactional
     public void deleteTask(Integer taskId) {
         Task task = taskRepository.findById(taskId)
-                .orElseThrow(() -> new ResponseStatusException(
-                        HttpStatus.NOT_FOUND, String.format("Task ID not found: %d", taskId)));
+                .orElseThrow(() -> new ServiceRuntimeException(
+                        HttpStatus.NOT_FOUND,
+                        ErrorCodes.TASK_E001,
+                        String.format("Task not found: #%s", taskId)));
         taskRepository.delete(task);
     }
 

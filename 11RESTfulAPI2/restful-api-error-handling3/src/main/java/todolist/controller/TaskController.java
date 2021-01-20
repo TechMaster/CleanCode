@@ -9,14 +9,10 @@ import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import todolist.dto.TaskDto;
+import todolist.error.ApiError;
+import todolist.error.ServiceRuntimeException;
 import todolist.service.TaskService;
 
 import javax.validation.Valid;
@@ -89,6 +85,12 @@ public class TaskController {
     public ResponseEntity<Void> deleteTask(@PathVariable(value = "taskId") Integer taskId) {
         taskService.deleteTask(taskId);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+
+    @ExceptionHandler({ServiceRuntimeException.class})
+    public ResponseEntity<ApiError> handleServiceRuntimeException(ServiceRuntimeException ex) {
+        ApiError apiError = new ApiError(ex.getErrorCode(), "Something went wrong!");
+        return new ResponseEntity<>(apiError, ex.getHttpStatus());
     }
 
 }
