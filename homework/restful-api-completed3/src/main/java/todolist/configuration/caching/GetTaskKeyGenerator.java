@@ -10,7 +10,7 @@ public class GetTaskKeyGenerator implements KeyGenerator {
 
     @Override
     public Object generate(Object target, Method method, Object... params) {
-        // tasks_{taskId}
+        // getTask_{taskId}
         return method.getName() + "_" + params[0];
     }
 
