@@ -20,7 +20,7 @@ public class CarConfig {
   private String engineType;
 
   @Bean
-  @Primary
+  
   public Car car() {
     Engine engine;
 
@@ -43,6 +43,7 @@ public class CarConfig {
   /* Hãy uncommend đoạn code này ở thí nghiệm thứ 2 */
   
   @Bean
+  @Primary
   public Car funcar() {
     return new Car((Engine) context.getBean("hybridEngine"));
   }
