@@ -82,6 +82,6 @@ private class Comment{
 Vinfast vừa ra mắt mẫu xe VF33. [Xem chi tiết ở đây](https://vingroup.net/tin-tuc-su-kien/bai-viet/2288/vinfast-ra-mat-3-dong-o-to-dien-tu-lai-khang-dinh-tam-nhin-tro-thanh-hang-xe-dien-thong-minh-toan-cau)
 Xe VF33 dùng chung một hệ thống khung sườn, hệ thống điều khiển tự lái thông minh nhưng có thể có tuỳ chọn động cơ xăng hoặc điện.
 
-Bạn là kỹ sư phần mềm mô phỏng, hãy viết code Java để mô phỏng xe VF33 có những đặc điểm nếu trên. Trước khi iết [hãy tham khảo code này](../SOLID/DependencyInjection/05DifferentWaysDI/demobean)
+Bạn là kỹ sư phần mềm mô phỏng, hãy viết code Java để mô phỏng xe VF33 có những đặc điểm nếu trên. Trước khi viết [hãy tham khảo code này](../SOLID/DependencyInjection/05DifferentWaysDI/demobean)
 
-Nếu bạn hỏi tôi nên viết như thế nào? Tôi sẽ trả lời lập trình là một công việc sáng tạo. Nhưng làm sao sáng tạo của bạn, đồng nghiệp hiểu được, dùng được và cùng tham gia code. Vậy bạn hãy lập trình để làm sao tôi (đồng nghiệp code của bạn) hiểu được code của bạn. Đừng phức tạp hoá vấn đề quá, nội dung method đôi khi chỉ cần dùng ```System.out.println("Some text here");```
+Nếu bạn hỏi tôi nên viết như thế nào? Tôi sẽ trả lời lập trình là một công việc sáng tạo. Nhưng làm sao sáng tạo của bạn, đồng nghiệp hiểu được, dùng được và cùng tham gia code. Vậy bạn hãy lập trình để làm sao tôi (đồng nghiệp code của bạn) hiểu được code của bạn. Đừng phức tạp hoá vấn đề quá, nội dung method đôi khi chỉ cần dùng ```System.out.println("Some text here");```. Ngoài ra bạn hãy tạo dự án Spring Boot để tận dụng các annotation như ```@Autowired```, ```@Value```, ````@Configuration``` để thực hiện kỹ thuật Dependency Injection.
