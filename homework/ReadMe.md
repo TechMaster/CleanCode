@@ -1,11 +1,11 @@
 # Bài tập tổng hợp cho lớp Clean Code
 
-Thời hạn nộp bài 2 tuần kể từ ngày 28/01/2021. Hạn nộp bài 11/2/2021
+Thời hạn nộp bài 2 tuần kể từ ngày 28/01/2021. Hạn nộp bài sẽ do ban lãnh đạo Luvina quyết định.
 
 ## Quy cách nộp bài tập:
 1. Sinh viên tạo git repo của riêng mình
 2. Lập trình bằng ngôn ngữ Java, sử dụng Spring Boot framework
-3. Tạo file ReadMe.md định dạng Markdown rồi trả lời trực tiếp vào câu hỏi trong file này. Phần lý thuyết có viết tự luận và trả lời trắc nghiệm chọn 1 đáp án trong 4 lựa chọn.
+3. Tạo file ReadMe.md định dạng Markdown rồi trả lời trực tiếp vào câu hỏi trong file này. Phần lý thuyết có viết tự luận và trả lời trắc nghiệm chọn 1 đáp án trong 4 lựa chọn. [Xem mẫu file này](HomeWork.md)
 4. Tập trung code vào các thư mục như sau
    ```
    .
@@ -46,20 +46,21 @@ N = 1, năm thứ 2
 
 Đề xuất của Bob
 ```java
-int calculateSalaryAfterYears(int years);
+int calculateSalaryAfterYears(int years, float raise);
 ```
 
 Đề xuất của Alice
 ```java
-int salaryAfterYears(Date joinedData, Date today, int initialSalary);
+int salaryAfterYears(Date joinedData, Date today, int initialSalary, float raise);
 ```
 
 Đề xuất của Toàn
 ```java
-int tinhLuongNamThuN(int namThuN, int luongNamDauTien);
+int tinhLuongNamThuN(int namThuN, int luongNamDauTien, float heSoTangLuong);
 ```
 
 Đề xuất của Vân
+```float raise``` là thuộc tính trong ```class Salary``` rồi.
 ```java
 int calculateSalaryAfterYears(int initialSalary, int NthYear);
 ```
