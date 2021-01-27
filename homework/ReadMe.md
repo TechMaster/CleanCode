@@ -34,7 +34,7 @@ Nếu bạn là team lead bạn sẽ chọn phương án nào? Giải thích t�
 
 3. Bạn là một team lead, khi bạn giới thiệu các quy tắc Clean Code cho các đồng đội trẻ. Có một số bạn cho rằng Clean Code chỉ làm phức tạp thêm vấn đề, và chậm lại hiệu suất làm việc của nhóm. Bạn sẽ trả lời họ thế nào?
 
-4. Bob, Alice, Toàn, Vân được sếp giao cho viết một hàm tính lương tăng theo năm làm việc. Năm đầu tiên nhân viên sẽ nhận mức lương kiểu integer là ```initialSalary```, cứ tròn 12 tháng, nhân viên được tăng lương bằng cách nhân với hệ số ```raise > 1.0```. Công thức là ```Salary at Nth year = initialSalary * (1 + raise)^N```
+4. Bob, Alice, Toàn, Vân được sếp giao cho viết một hàm tính lương tăng theo năm làm việc. Năm đầu tiên nhân viên sẽ nhận mức lương kiểu integer là ```initialSalary```, cứ tròn 12 tháng, nhân viên được tăng lương bằng cách nhân với hệ số ```raise > 1.0``` được cài đặt sẵn. Công thức là ```Salary at Nth year = initialSalary * (1 + raise)^N```
 N = 0, năm đầu tiên
 N = 1, năm thứ 2
 ...
