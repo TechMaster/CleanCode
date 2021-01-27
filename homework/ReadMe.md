@@ -137,20 +137,23 @@ Giả sử các bạn đang cần xây dựng một hệ thống phần mềm đ
 
 ### Yêu cầu của bài tập
 
-Các bạn hãy xác định các thực thể tham gia trong phần mềm và thiết kế cơ sở dữ liệu cho phần mềm.
-Các bạn có thể đưa ra một Lược đồ quan hệ thực thể (ERD) để biểu diễn thông tin và mối quan hệ giữa các thực thể này.
+Các bạn hãy xác định các thực thể tham gia trong phần mềm và thiết kế cơ sở dữ liệu cho phần mềm:
+- Tránh sử dụng các anti-pattern đã được tìm hiểu trong buổi 12.
+- Đưa ra một Lược đồ quan hệ thực thể (ERD) để biểu diễn thông tin và mối quan hệ giữa các thực thể.
 
-## Phần 4: Thiết kế RESTful API
+## Phần 4: Thiết kế RESTful API 1
 ### Yêu cầu của bài tập
 
-Các bạn hãy xây dựng một RESTful API cho phép client đăng ký người dùng (cả giảng viên và học viên) với request sau:
+Các bạn hãy thiết kế một RESTful API cho phép client đăng ký người dùng (cả giảng viên và học viên): 
 
-Đăng ký giảng viên
+*Request:*
+
+Đăng ký giảng viên:
 
 ```json
 {
-    "email": "a.nguyen@gmali.com",
     "name": "Nguyen Van A",
+    "email": "a.nguyen@gmali.com",
     "password": "123456",
     "teacher": {
         "phone": "0987654321",
@@ -160,12 +163,12 @@ Các bạn hãy xây dựng một RESTful API cho phép client đăng ký ngư�
 }
 ```
 
-Đăng ký học viên
+Đăng ký học viên:
 
 ```json
 {
-    "email": "b.tran@gmali.com",
     "name": "Tran Van B",
+    "email": "b.tran@gmali.com",
     "password": "123456",
     "student": {
         "year": 2020
@@ -174,29 +177,55 @@ Các bạn hãy xây dựng một RESTful API cho phép client đăng ký ngư�
 }
 ```
 
-Response: 204 - No content
+*Response khi đăng ký thành công:* 
 
-với các yêu cầu:
+HTTP status code: 200
 
+```json
+{
+    "name": "Tran Van B",
+    "email": "b.tran@gmali.com"
+}
+```
+
+hoặc
+
+```json
+{
+    "name": "Tran Van B",
+    "email": "b.tran@gmali.com",
+    "password": "******"
+}
+```
+
+Các yêu cầu:
 1. Tạo các entity User, Teacher, Student và sử dụng annotation @Inheritance của Hibernate/Spring Data JPA để mapping quan hệ kế thừa giữa Teacher và Student với User.
 2. Sử dụng Factory Method pattern để khởi tạo đối tượng phù hợp với request.
-3. RESTful API endpoint cần phải phù hợp với các convention đã được học và được đánh version.
-4. Tích hợp Swagger để sinh tài liệu cho RESTful API.
-5. Cần kiểm tra email đã được đăng ký bởi người dùng khác hay chưa. Nếu đã được đăng ký thì cần throw exception và có cơ chế error handling thích hợp.
-6. Cho phép log request body của RESTful API.
+3. Endpoint của API cần phải phù hợp với các convention đã được học và được đánh version.
+4. Response của API cần ẩn trường password hoặc convert thành `******`.
+4. Tích hợp Swagger để sinh tài liệu cho API.
+5. Cần kiểm tra email đã được đăng ký bởi người dùng khác hay chưa. 
+- Throw exception và có cơ chế error handling thích hợp.
+- Error message trong response body cần rõ ràng, cung cấp các thông tin cần thiết để xác định nguyên nhân lỗi, không chứa thông tin password.
+- HTTP status code phù hợp.
+6. Cho phép log request body của API nhưng email và password cần được convert thành `******`.
 
-## Phần 5: Lập trình Restful API
+## Phần 5: Thiết kế RESTful API 2
 ### Yêu cầu của bài tập
 
-Dựa trên mã nguồn ở bài tập 2, các bạn hãy xây dựng một RESTful API cho phép client tìm kiếm khóa học với:
+Dựa trên mã nguồn ở bài tập 2, các bạn hãy thiết kế một RESTful API cho phép client tìm kiếm khóa học với:
 
-Request: /api/v1/courses?keyword=Spring&sortBy=name
+*Request:*
+ 
+`/api/v1/courses?keyword=Spring&sortBy=name`
 
 Trong đó:
 - keyword (không required): là từ khóa để tìm kiếm khóa học theo tên của khóa học.
 - sortBy (không required): có 2 giá trị là name (sắp xếp theo thứ tự tăng dần của tên khóa học) và opened (sắp xếp theo thứ tự giảm dần của thời điểm bắt đầu khóa học).
 
-Response:
+*Response:*
+
+HTTP status code: 200
 
 ```json
 [
@@ -215,8 +244,7 @@ Response:
 ]
 ```
 
-với các yêu cầu:
-
+Các yêu cầu:
 1. Tạo entity Course và sử dụng annotation @ManyToOne của Hibernate/Spring Data JPA để mapping quan hệ giữa Course và Teacher.
 2. Sử dụng Strategy pattern để cài đặt các thuật toán sắp xếp.
 3. RESTful API endpoint cần phải phù hợp với các convention đã được học và được đánh version.
