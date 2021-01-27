@@ -1,7 +1,4 @@
 # Bài tập tổng hợp cho lớp Clean Code
-
-Thời hạn nộp bài 2 tuần kể từ ngày 28/01/2021. Hạn nộp bài sẽ do ban lãnh đạo Luvina quyết định.
-
 ## Quy cách nộp bài tập:
 1. Sinh viên tạo git repo của riêng mình
 2. Lập trình bằng ngôn ngữ Java, sử dụng Spring Boot framework
@@ -42,7 +39,13 @@ N = 0, năm đầu tiên
 N = 1, năm thứ 2
 ...
 
-Đây là tên hàm do họ đề xuất;
+```java
+public class Salary {
+   float raise; //Hệ số tăng lương
+   // Tiếp theo là phương thức tính lương theo thâm niên
+}
+```
+Đây là tên phương thức do họ đề xuất;
 
 Đề xuất của Bob
 ```java
@@ -78,6 +81,14 @@ public class User {
    private ArrayList<Post> posts;  //Một người có thể viết nhiều Post
    private ArrayList<Comment> comments; //Một người có thể bình luận nhiều Comment
    //---- Bổ xung method vào đây. Nhiệm vụ của các bạn đó !
+
+   void writePost(Post post) { //ví dụ mẫu một phương thức nhé
+      //Bổ xung logic vào đây
+   }
+
+   void deletePost(Post post) throws PostException {  //Nếu tác động lên dữ liệu nếu có lỗi thì hãy throw ra Exception
+
+   }
 }
 
 public class Post {
