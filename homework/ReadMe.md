@@ -202,7 +202,7 @@ Các yêu cầu:
 ## Phần 5: Thiết kế RESTful API 2
 ### Yêu cầu của bài tập
 
-Dựa trên mã nguồn ở bài tập 2, các bạn hãy xây dựng một RESTful API cho phép client tìm kiếm khóa học với:
+Dựa trên mã nguồn ở bài tập 2, các bạn hãy thiết kế một RESTful API cho phép client tìm kiếm khóa học với:
 
 *Request:*
  
