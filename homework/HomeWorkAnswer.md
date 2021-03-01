@@ -211,11 +211,16 @@ Bạn là kỹ sư phần mềm mô phỏng, hãy viết code Java để mô ph�
 Nếu bạn hỏi tôi nên viết như thế nào? Tôi sẽ trả lời lập trình là một công việc sáng tạo. Nhưng làm sao sáng tạo của bạn, đồng nghiệp hiểu được, dùng được và cùng tham gia code. Vậy bạn hãy lập trình để làm sao tôi (đồng nghiệp code của bạn) hiểu được code của bạn. Đừng phức tạp hoá vấn đề quá, nội dung method đôi khi chỉ cần dùng ```System.out.println("Some text here");```. Ngoài ra bạn hãy tạo dự án Spring Boot để tận dụng các annotation như ```@Autowired```, ```@Value```, ```@Configuration``` để thực hiện kỹ thuật Dependency Injection.
 
 *Hướng dẫn chấm bài này. Thực ra bài này đã có ví dụ mẫu chi tiết ở đây*
-[SOLID/DependencyInjection/demobean](../SOLID/DependencyInjection/04DependencyInjection/demobean/ReadMe.md)
+[SOLID/DependencyInjection/04DependencyInjection/demobean](../SOLID/DependencyInjection/04DependencyInjection/demobean/ReadMe.md) và [SOLID/DependencyInjection/05DifferentWaysDI/demobean](../SOLID/DependencyInjection/05DifferentWaysDI/demobean)
+
+
 ```java
 //Khai báo lớp Car gồm hệ thống khung sườn (chassis), hệ thống điều khiển tự lái thông mình và động cơ tuỳ chọn
 public class VF33Car {
+   @Autowired
    private Chassis chassis;
+
+   @Autowired
    private SmartSteering steering;  //Đề bài không cần phải thay đổi nên có thể dùng luôn SmartSteering
 }
 
@@ -231,11 +236,11 @@ public class CarConfig {
   @Autowired
   private ApplicationContext context;
 
-  @Value("${engineType}")
+  @Value("${engineType}") //Đọc thuộc tính engineType từ file application.properties
   private String engineType;
 
   @Bean  
-  public VF33Car car() {
+  public VF33Car car() {  //Cấu hình engineType trong phương thức tạo ra Bean
     Engine engine;
     if (engineType.equals("gasEngine")) {
        engine = (Engine) context.getBean("gasEngine");
@@ -247,6 +252,7 @@ public class CarConfig {
   }
 }
 
+//Cấu hình cho Engine
 @Configuration
 public class EngineConfig {
   @Bean
@@ -254,10 +260,33 @@ public class EngineConfig {
     return new Engine("Gas Engine");
   }
 
-  @Bean(name = "electricEngine")
+  @Bean
   public Engine electricEngine() {
     return new Engine("Electric Engine");
   }
+}
+```
+
+Cách thứ 2 sử dụng constructor based injection
+
+```java
+public class VF33Car {
+   @Autowired
+   private Chassis chassis;
+
+   @Autowired
+   private SmartSteering steering; 
+
+   Engine engine;
+
+   @Autowired
+   public VF33Car(@Value("${engineType}") String engineType) {  //Constructor của VF33Car nhận tham số truyền vào giữa vào thuộc tính engineType trong application.properties      
+      if (engineType.equals("gasEngine")) {
+         engine = (Engine) context.getBean("gasEngine");
+      } else {
+         engine = (Engine) context.getBean("electricEngine");
+      }
+   }
 }
 ```
 
