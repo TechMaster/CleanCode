@@ -50,7 +50,7 @@ Nếu bạn là team lead bạn sẽ chọn phương án nào? Giải thích t�
 
    Tóm lại chọn Team A hay Team C đều được điểm tối đa.
 
-1. Bạn là một team lead, khi bạn giới thiệu các quy tắc Clean Code cho các đồng đội trẻ. Có một số bạn cho rằng Clean Code chỉ làm phức tạp thêm vấn đề, và chậm lại hiệu suất làm việc của nhóm. Bạn sẽ trả lời họ thế nào?
+3. Bạn là một team lead, khi bạn giới thiệu các quy tắc Clean Code cho các đồng đội trẻ. Có một số bạn cho rằng Clean Code chỉ làm phức tạp thêm vấn đề, và chậm lại hiệu suất làm việc của nhóm. Bạn sẽ trả lời họ thế nào?
    *Câu trả lời tự luận*
 
    Còn tuỳ thuộc dự án chúng ta làm gì:
@@ -58,7 +58,7 @@ Nếu bạn là team lead bạn sẽ chọn phương án nào? Giải thích t�
    - Dự án gia công: fix một số bug của một phần mềm tạo ra cách đây 15 năm, có hơn 300,000 dòng code. Khách hàng chỉ trả tiền cho việc fix bug. Vậy bạn có muốn áp dụng Clean Code toàn diện cũng khó. Chỉ cần comment rõ phần sửa đổi, và kiểm thử code mới có ảnh hưởng đến chức năng hiện tại không? Tuy nhiên code chỉnh sửa cũng cần phải trong sáng, dễ hiểu. Thử nghĩ xem mỗi lần fix bug, lập trình viên lại thêm những khối code khó hiểu, rối rắm vào hệ thống hiện có thì chỉ sau 1 năm, dự án sẽ trở thành tai hoạ.
    - Dự án làm sản phẩm, có một team tham gia cần áp dụng Clean Code. Việc học, thống nhất, áp dụng Clean Code chỉ mất khoảng 1-2 tuần. Ngược lại một dự án cẩu thả, thì 80% thời gian và nỗ lực chỉ dùng để vá lỗi và kiểm thử.
 
-2. Bob, Alice, Toàn, Vân được sếp giao cho viết một hàm tính lương tăng theo năm làm việc. Năm đầu tiên nhân viên sẽ nhận mức lương kiểu integer là ```initialSalary```, cứ tròn 12 tháng, nhân viên được tăng lương bằng cách nhân với hệ số ```raise > 1.0``` được cài đặt sẵn. Công thức là ```Salary at Nth year = initialSalary * (1 + raise)^N```
+4. Bob, Alice, Toàn, Vân được sếp giao cho viết một hàm tính lương tăng theo năm làm việc. Năm đầu tiên nhân viên sẽ nhận mức lương kiểu integer là ```initialSalary```, cứ tròn 12 tháng, nhân viên được tăng lương bằng cách nhân với hệ số ```raise > 1.0``` được cài đặt sẵn. Công thức là ```Salary at Nth year = initialSalary * (1 + raise)^N```
 N = 0, năm đầu tiên
 N = 1, năm thứ 2
 ...
@@ -101,7 +101,7 @@ Trong 4 đề xuất trên đề xuất nào là phù hợp với quy ước tro
 *Câu trả lời là cách của Vân nhé !*
 
 
-1. Hãy lập trình mô hình hoá nghiệp vụ sau đây. Cụ thể là hãy bổ xung các method để hoàn thiện logic. Quan trọng hãy tuân thủ quy tắc Clean Code.
+5. Hãy lập trình mô hình hoá nghiệp vụ sau đây. Cụ thể là hãy bổ xung các method để hoàn thiện logic. Quan trọng hãy tuân thủ quy tắc Clean Code.
 - 1 User có thể viết nhiều bài Post, hoặc xoá
 - 1 User có thể viết Comment cho bài Post của người khác và chính mình. User có thể xoá comment của chính mình
 
