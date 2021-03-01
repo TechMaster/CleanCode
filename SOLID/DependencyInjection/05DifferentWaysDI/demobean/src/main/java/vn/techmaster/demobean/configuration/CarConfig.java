@@ -19,8 +19,7 @@ public class CarConfig {
   @Value("${engineType}")
   private String engineType;
 
-  @Bean
-  
+  @Bean  
   public Car car() {
     Engine engine;
 
