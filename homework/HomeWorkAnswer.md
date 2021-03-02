@@ -309,6 +309,10 @@ Các bạn hãy xác định các thực thể tham gia trong phần mềm và t
 - Tránh sử dụng các anti-pattern đã được tìm hiểu trong buổi 12.
 - Đưa ra một Lược đồ quan hệ thực thể (ERD) để biểu diễn thông tin và mối quan hệ giữa các thực thể.
 
+Đáp án
+
+![alt text](https://github.com/EriChannel/Image/blob/main/course_management_erd.png)
+
 ## Phần 4: Thiết kế RESTful API 1
 ### Yêu cầu của bài tập
 
